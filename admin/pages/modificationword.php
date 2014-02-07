@@ -14,23 +14,27 @@
             <br/>
             <div class="row" >
               <div class="form-group col-md-4">
+                <label for="namewordcz">Slovíčko česky : </label>
+                <input type="text" name="name-word-cz" class="form-control font-size16 margin-bottom-7" id="namewordcz" >
+                <label for="newsound" >Vložit zvukový soubor : </label>
+                <input type="file" src="#" name="new-sound" class="form-control font-size16" id="newsound" >
+              </div>             
+              <div class="form-group col-md-4">
                 <label for="datenewword">Datum vložení nového slovíčka : </label>
-                <input type="date" name="date-new-word" class="form-control font-size16" id="datenewword" >
-                <label for="newword" >Vložit nový obrázek : </label>
-                <input type="file" src="#" name="new-image" class="form-control font-size16" id="newimage" >
+                <input type="date" name="date-new-word" class="form-control font-size16 margin-bottom-7" id="datenewword" >
+                <label for="newimage" >Vložit nový obrázek : </label>
+                <input type="file" src="#" name="new-image" class="form-control font-size16" id="newimage" >                            
               </div>
               <div class="form-group col-md-2 " >
                 <label for="topicalimage" >Vybraný obrázek : </label>
                 <input type="text" src="#" name="topical-image" class="form-control image-word" id="topicalimage" readonly />
-              </div>
-              <div class="form-group col-md-4">
-                <br/><br/>                            
               </div>
               <div class="form-group col-md-2 hover4"> 
                 <br/><br/><br/><br/>                              
                 <button type="submit" class="btn btn-default button-odeslat">Odeslat</button>
               </div>  
             </div>            <!-- end of row -->
+            
 
             <div class="row" >
               <div class="col-md-4 " >

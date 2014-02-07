@@ -2,7 +2,7 @@
             <div class="row posuntop90">
               <div class="form-group col-md-4">
                 <label for="namevideo">Jméno videa : </label>
-                <input type="text" name="name-video" class="form-control font-size16" id="namevideo" placeholder="Jedno-slovo">
+                <input type="text" name="name-video" class="form-control font-size16" id="namevideo" >
               </div>
               <div class="form-group col-md-6">
                 <br/><br/>

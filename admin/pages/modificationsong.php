@@ -1,42 +1,38 @@
           <form role="form">
             <div class="row posuntop90">
               <div class="form-group col-md-4">
-                <label for="newimage" >Vložit písničku : </label>
-                <input type="file" src="#" name="new-image" class="form-control font-size16" id="newimage" tabindex="1" >
+                <label for="namesong" tabindex="1" >Jméno písničky : </label>
+                <input type="text" name="name-song" class="form-control font-size16" id="namesong" >
               </div>
-              <div class="form-group col-md-4">
+              <div class="form-group col-md-6">
                 <br/><br/>
               </div>              
               <div class="form-group col-md-2 hover3" id="active1">
                 <br/>
                 <button type="button" name="delete" class="btn btn-danger delete-button" tabindex="0" >Smazat písničku</button>               
               </div>
-              <div class="form-group col-md-2">
-                <br/><br/>
-              </div>                    
-            </div>            <!-- end of row -->            
+            </div>            <!-- end of row -->                    
             <br/>
             <div class="row" >
               <div class="form-group col-md-4" >
-                <label for="newword" >Vložit nový obrázek : </label>
-                <input type="file" src="#" name="new-image" class="form-control font-size16" id="newimage" tabindex="2" >
-                <label for="datenewword">Datum vložení nové písničky : </label>
-                <input type="date" name="date-new-word" class="form-control font-size16" id="datenewword" tabindex="3">
+                <label for="newsong" >Vložit písničku : </label>
+                <input type="file" src="#" name="new-song" class="form-control font-size16 margin-bottom-7" id="newsong" tabindex="2" >
+               <label for="datenewsong">Datum vložení nové písničky : </label>
+                <input type="date" name="date-new-song" class="form-control font-size16" id="datenewsong" tabindex="4">
               </div>
-              <div class="form-group col-md-2 " >
-                <label for="topicalimage" >Vybraný obrázek : </label>
-                <input type="text" src="#" name="topical-image" class="form-control image-word" id="topicalimage" readonly tabindex="0" />
+              <div class="form-group col-md-4 padding-top-64" >
+                
+                <label for="newimage" " >Vložit nový obrázek : </label>
+                <input type="file" src="#" name="new-image" class="form-control font-size16" id="newimage" tabindex="3" >  
               </div>  
               <div class="form-group col-md-2">
-                <br/><br/>
+                <label for="topicalimage" >Vybraný obrázek : </label>
+                <input type="text" src="#" name="topical-image" class="form-control image-word" id="topicalimage" readonly tabindex="0" />
               </div>
               <div class="form-group col-md-2 hover4">                               
                 <br/><br/><br/><br/>
                 <button type="submit" class="btn btn-default button-odeslat">Odeslat</button>
               </div>
-              <div class="form-group col-md-2">
-                <br/><br/>
-              </div>  
             </div>            <!-- end of row -->
 
             <div class="row" >
@@ -125,3 +121,4 @@
               </div>      <!-- end of class="col-md-4"  -->              
             </div>        <!-- end of row -->     
           </form>        
+          

@@ -2,7 +2,7 @@
             <div class="row posuntop90">
               <div class="form-group col-md-4">
                 <label for="nametheme">Jméno téma : </label>
-                <input type="text" name="name-theme" class="form-control font-size16" id="nametheme" placeholder="Jedno-slovo">
+                <input type="text" name="name-theme" class="form-control font-size16" id="nametheme" >
               </div>
               <div class="form-group col-md-6">
                 <br/><br/>

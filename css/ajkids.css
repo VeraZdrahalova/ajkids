@@ -11,6 +11,7 @@
 
 .list  {
 	background-color: silver;
+	margin-bottom: 40px;
 }
 
 .posunleft { 
@@ -206,5 +207,10 @@ table th {
 	padding: 0px;
 }
 
+.margin-bottom-7 {
+	margin-bottom: 7px;
+}
 
-
+.padding-top-64 {
+	padding-top: 64px;
+}
