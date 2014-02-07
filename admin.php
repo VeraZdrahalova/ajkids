@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+require_once 'core/db.php';
 
 // $pages = [
 // 	[
@@ -62,6 +64,10 @@ if (isset($_GET['page'])) {
 	$selectedPage = $pages[$_GET['page']];
 }
 
+if ($selectedPage !== null AND file_exists('admin/pages/' . $selectedPage['id'] . '-action.php')) {
+	require 'admin/pages/' . $selectedPage['id'] . '-action.php';
+}
+
 
 ?>
 <!DOCTYPE html>
@@ -123,7 +129,7 @@ if (isset($_GET['page'])) {
           <div class="posuntop90">
           	<?php var_dump($selectedPage); ?>
           	
-          	<?php if ($selectedPage !== null) { require 'admin/pages/' . $selectedPage['id'] . '.php'; } ?>
+          	<?php if ($selectedPage !== null) { require 'admin/pages/' . $selectedPage['id'] . '-view.php'; } ?>
           </div>
 
       </div><!-- end of container -->            

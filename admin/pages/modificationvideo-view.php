@@ -1,22 +1,23 @@
-          <form role="form">
+         
+          <form role="form" method="POST">
             <div class="row posuntop90">
               <div class="form-group col-md-4">
                 <label for="namevideo">Jméno videa : </label>
-                <input type="text" name="name-video" class="form-control font-size16" id="namevideo" >
+                <input type="text" name="name-video" class="form-control font-size16" id="namevideo" value="<?php echo $video['name'] ?>" >
               </div>
               <div class="form-group col-md-6">
                 <br/><br/>
               </div>
               <div class="form-group col-md-2 hover3" id="active1">
                 <br/>
-                <button type="button" name="delete" class="btn btn-danger delete-button "  >Smazat video</button>               
+                <button type="submit" name="action" value="delete" class="btn btn-danger delete-button "  >Smazat video</button>               
               </div>
             </div>            <!-- end of row -->
             <br/>
             <div class="row ">
               <div class="form-group col-md-12 " >
                 <label for="urlvideo" >URL videa : </label>
-                <input type="text" name="url-video" class="form-control font-size16" id="urlvideo" placeholder="Vložit celý <iframe .....> &lt;/iframe&gt; jako na příkladu níže">
+                <input type="text" name="url-video" class="form-control font-size16" id="urlvideo" placeholder="Vložit celý &lt;iframe .....&gt; &lt;/iframe&gt; jako na příkladu níže" value="<?php echo $video['url'] ?>">
                 <span class="help-block black"> &nbsp;Příklad: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;iframe width="560" height="315" src="http://www.youtube-nocookie.com/embed/rnV4EEKXw-g?rel=0" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</span>
               </div>
             </div>            <!-- end of row -->
@@ -336,7 +337,7 @@
 
               <div class="form-group col-md-2"></div>             
               <div class="form-group col-md-2 hover4">                                
-                <button type="submit" class="btn btn-default button-odeslat">Odeslat</button>
+                <button type="submit" class="btn btn-default button-odeslat" name="action" value="<?php if (isset($video['id'])) echo 'update'; else echo 'insert'; ?>">Odeslat</button>
               </div>  
             </div>        <!-- end of row -->
           </form>        
