@@ -1,8 +1,9 @@
+
           <form role="form" method="POST">
             <div class="row posuntop90">
               <div class="form-group col-md-4">
                 <label for="nametheme">Jméno téma : </label>
-                <input type="text" name="name-theme" class="form-control font-size16" id="nametheme" value="<?php echo $theme[name] ?>">
+                <input type="text" name="name-theme" class="form-control font-size16" id="nametheme" value="<?php echo $theme['name'] ?>">
               </div>
               <div class="form-group col-md-6">
                 <br/><br/>
@@ -30,7 +31,7 @@
               </div>                          
               <div class="form-group col-md-2 hover4">
                 <br/><br/><br/><br/><br/>
-                <button type="submit" class="btn btn-default button-odeslat" value="<?php if (isset ($theme['id'])) echo 'update'; else echo 'insert'; ?>" >Odeslat</button>
+                <button type="submit" class="btn btn-default button-odeslat" name="action" value="<?php if (isset ($theme['id'])) echo 'update'; else echo 'insert'; ?>" >Odeslat</button>
               </div>  
             </div>            <!-- end of row -->
 

@@ -23,8 +23,8 @@ $themes = $result->fetch_all(MYSQLI_ASSOC);
                       <td> video zvířata 1, video zvířata 2, video zvířata 3, video zvířata 4, video zvířata 5, video zvířata 5, video zvířata 5, video zvířata 5, video zvířata 5, video zvířata 5, video zvířata 5, video zvířata 5 </td>
                       <td> písníčka 1, písnička3  </td>
                       <td> slovíčko 1, slovíčko 2, slovíčko 3, slovíčko 4, slovíčko 5, slovíčko 6, slovíčko 7, slovíčko 8, slovíčko 9, slovíčko 10, slovíčko 11, slovíčko 12, slovíčko 13, slovíčko 14, slovíčko 15, slovíčko 15, slovíčko 15, slovíčko 15, slovíčko 15, slovíčko 15 </td>
-                      <td> <?php echo $theme[date]?> </td>
-                      <td><a href="?page=modificationtheme$id=<?php echo $theme['id'] ?>">Upravit</a></td>
+                      <td> <?php echo date('j.n.Y', strtotime($theme['date']))?> </td>                      			
+                      <td><a href="?page=modificationtheme&id=<?php echo $theme['id'] ?>">Upravit</a></td>
                   </tr>
               	<?php }?>
               </tbody>                 

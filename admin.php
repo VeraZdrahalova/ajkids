@@ -1,6 +1,7 @@
 <?php
 
 require_once 'core/db.php';
+require_once 'core/Image.php';
 
 $pages = [
 	'listthemes' => [
@@ -37,6 +38,7 @@ $pages = [
 	],
 ];
 
+
 $selectedPage = null;
 
 if (isset($_GET['page'])) {
@@ -56,7 +58,7 @@ if ($selectedPage !== null AND file_exists('admin/pages/' . $selectedPage['id'] 
   <head>
     <meta name="description" content="Angličtina pro děti">  
     <meta charset="UTF-8">
-    <title>Úprava videa</title>
+    <title>Úprava angličtiny pro děti</title>
     
     <!-- Bootstrap -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
