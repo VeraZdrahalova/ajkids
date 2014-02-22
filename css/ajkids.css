@@ -18,8 +18,8 @@
 	margin-left: 10%; 
 }
 
-.posunleft20 { 
-	margin-left: 20%; 
+.posunleft15 { 
+	margin-left: 15%; 
 }
  
 .obr-margin img { 
@@ -39,8 +39,8 @@
 }
 
 .list .navbar {
-	height : 35px;
-	min-height : 30px;
+	height : 25px;
+	min-height : 20px;
 }
 
 .list a {
@@ -57,7 +57,8 @@
 }
 
 .list .navbar-inverse {
-	background-color : red;			
+	background-color : red;
+	border-color: rgba(0,0,0,0);			
 }
 
 .align-center {
@@ -71,7 +72,8 @@
 	border-style: solid;
 	border-color: rgb(211, 211, 211);
 	padding: 12px;
-	font-size: 16px;
+	font-size: 14px;
+	line-height: 10px;
 }
 
 #hover1 a:hover {
@@ -107,9 +109,15 @@ table th {
 	white-space: nowrap;
 }
 
+table {
+	font-size: 14px;
+}
+
 #icon {
-	background-color : rgb(200,200,200);
-	color: black;	
+	background-color : rgb(220,220,220);
+	color: black;
+	height: 25px;
+	padding: 3px 10px;	
 }
 
 #hovericon a:hover {
@@ -121,10 +129,11 @@ table th {
 	padding: 12px;
 	font-weight: bold;
 	color: white;
-	font-size: 16px;
+	font-size: 14px;
 	border-width: 0px 1px;
 	border-style: solid;
-	border-color: rgb(211,211,211);		
+	border-color: rgb(211,211,211);
+	line-height: 10px;		
 }
 
 .checks-border {
@@ -148,12 +157,12 @@ table th {
 }
 
 .font-margin-label label {
-	font-size: 16px;
+	font-size: 14px;
 	margin-bottom: 1px;
 }
 
 .font-size16 {
-	font-size: 16px;
+	font-size: 14px;
 }
 
 .image-theme {

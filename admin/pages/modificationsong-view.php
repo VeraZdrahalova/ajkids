@@ -2,7 +2,7 @@
             <div class="row posuntop90">
               <div class="form-group col-md-4">
                 <label for="namesong" tabindex="1" >Jméno písničky : </label>
-                <input type="text" name="name-song" class="form-control font-size16" id="namesong" >
+                <input type="text" name="name-song" class="form-control" id="namesong" >
               </div>
               <div class="form-group col-md-6">
                 <br/><br/>
@@ -16,14 +16,14 @@
             <div class="row" >
               <div class="form-group col-md-4" >
                 <label for="newsong" >Vložit písničku : </label>
-                <input type="file" src="#" name="new-song" class="form-control font-size16 margin-bottom-7" id="newsong" tabindex="2" >
+                <input type="file" src="#" name="new-song" class="form-control margin-bottom-7" id="newsong" tabindex="2" >
                <label for="datenewsong">Datum vložení nové písničky : </label>
-                <input type="date" name="date-new-song" class="form-control font-size16" id="datenewsong" tabindex="4">
+                <input type="date" name="date-new-song" class="form-control" id="datenewsong" tabindex="4">
               </div>
               <div class="form-group col-md-4 padding-top-64" >
                 
                 <label for="newimage" " >Vložit nový obrázek : </label>
-                <input type="file" src="#" name="new-image" class="form-control font-size16" id="newimage" tabindex="3" >  
+                <input type="file" src="#" name="new-image" class="form-control" id="newimage" tabindex="3" >  
               </div>  
               <div class="form-group col-md-2">
                 <label for="topicalimage" >Vybraný obrázek : </label>
@@ -41,7 +41,7 @@
                 <div  class="checks-border" id="label1">
                   <div class="checks-label" >
                     <label class="checks-label"> 
-                      <input name="vyber-tema1"  type="checkbox" class="font-size16" >
+                      <input name="vyber-tema1"  type="checkbox" >
                       &nbsp;&nbsp;Téma x 
                     </label>
                   </div >
@@ -71,7 +71,7 @@
                   </div>
                   <div class="checks-label" >
                     <label class="checks-label"> 
-                      <input name="vyber-tema6"  type="checkbox" class="font-size16" >
+                      <input name="vyber-tema6"  type="checkbox" >
                       &nbsp;&nbsp;Téma x 
                     </label>
                   </div >
@@ -83,37 +83,37 @@
                 <div  class="checks-border" id="label1">
                   <div class="checks-label" >
                     <label class="checks-label"> 
-                      <input name="vyber-slovicko6"  type="checkbox" class="font-size16" >
+                      <input name="vyber-slovicko6"  type="checkbox" >
                       &nbsp;&nbsp;Slovíčko x 
                     </label>
                   </div >
                   <div class="checks-label" >
                     <label class="checks-label"> 
-                      <input name="vyber-slovicko7"  type="checkbox" class="font-size16" >
+                      <input name="vyber-slovicko7"  type="checkbox" >
                       &nbsp;&nbsp;Slovíčko x 
                     </label>
                   </div >
                   <div class="checks-label" >
                     <label class="checks-label"> 
-                      <input name="vyber-slovicko8"  type="checkbox" class="font-size16" >
+                      <input name="vyber-slovicko8"  type="checkbox" >
                       &nbsp;&nbsp;Slovíčko x 
                     </label>
                   </div >
                   <div class="checks-label" >
                     <label class="checks-label"> 
-                      <input name="vyber-slovicko9"  type="checkbox" class="font-size16" >
+                      <input name="vyber-slovicko9"  type="checkbox" >
                       &nbsp;&nbsp;Slovíčko x 
                     </label>
                   </div >
                   <div class="checks-label" >
                     <label class="checks-label"> 
-                      <input name="vyber-slovicko10"  type="checkbox" class="font-size16" >
+                      <input name="vyber-slovicko10"  type="checkbox" >
                       &nbsp;&nbsp;Slovíčko x 
                     </label>
                   </div >
 				  <div class="checks-label" >
                     <label class="checks-label"> 
-                      <input name="vyber-slovicko1"  type="checkbox" class="font-size16" >
+                      <input name="vyber-slovicko1"  type="checkbox">
                       &nbsp;&nbsp;Slovíčko x 
                     </label>
                   </div >

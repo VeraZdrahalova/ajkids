@@ -2,21 +2,6 @@
 
 require_once 'core/db.php';
 
-// $pages = [
-// 	[
-// 		'name' => 'Videa',
-// 		'id' => 'listvideos',
-// 	],
-// 	[
-// 		'name' => 'Písničky',
-// 		'id' => 'listsongs',
-// 	],
-// 	[
-// 		'name' => 'Slovíčka',
-// 		'id' => 'listwords',
-// 	],
-// ];
-
 $pages = [
 	'listthemes' => [
 		'name' => 'Téma',
@@ -54,16 +39,12 @@ $pages = [
 
 $selectedPage = null;
 
-// VAR_DUMP($_GET);
-// DIE;
-
 if (isset($_GET['page'])) {
-// 	$aa = $_GET['page'];
-// 	$selectedPage = $pages[$aa];
-	
+
 	$selectedPage = $pages[$_GET['page']];
 }
-
+//echo " tohle je var_dump(selectedPage) "; VAR_DUMP($selectedPage);
+//die;
 if ($selectedPage !== null AND file_exists('admin/pages/' . $selectedPage['id'] . '-action.php')) {
 	require 'admin/pages/' . $selectedPage['id'] . '-action.php';
 }
@@ -77,7 +58,7 @@ if ($selectedPage !== null AND file_exists('admin/pages/' . $selectedPage['id'] 
   <head>
     <meta name="description" content="Angličtina pro děti">  
     <meta charset="UTF-8">
-    <title>Úprava videa</title>
+    <title>Angličtina pro děti</title>
     
     <!-- Bootstrap -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -120,14 +101,14 @@ if ($selectedPage !== null AND file_exists('admin/pages/' . $selectedPage['id'] 
 	                  	<?php } ?>
                   	<?php } ?>
                 </ul>
-                <span  class="posunleft20" id="hovericon">             
+                <span  class="posunleft15" id="hovericon">             
                     <a href="ajkids.html" class="btn btn-default" id="icon" target="_blank" role="button"><span class="glyphicon glyphicon-home"></span></a>
                 </span>                   
               </div><!-- /.navbar-collapse -->
           </nav>
 
           <div class="posuntop90">
-          	<?php var_dump($selectedPage); ?>
+          	<?php var_dump($selectedPage); ?><br/>
           	
           	<?php if ($selectedPage !== null) { require 'admin/pages/' . $selectedPage['id'] . '-view.php'; } ?>
           </div>
