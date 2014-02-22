@@ -1,15 +1,16 @@
-          <form role="form">
+
+          <form role="form" method="POST">
             <div class="row posuntop90">
               <div class="form-group col-md-4">
                 <label for="nametheme">Jméno téma : </label>
-                <input type="text" name="name-theme" class="form-control font-size16" id="nametheme" >
+                <input type="text" name="name-theme" class="form-control font-size16" id="nametheme" value="<?php echo $theme['name'] ?>">
               </div>
               <div class="form-group col-md-6">
                 <br/><br/>
               </div>              
               <div class="form-group col-md-2 hover3" id="active1">
                 <br/>
-                <button type="button" name="delete" class="btn btn-danger delete-button "  >Smazat téma</button>               
+                <button type="submit" name="action" class="btn btn-danger delete-button" value="delete" >Smazat téma</button>               
               </div>
             </div>            <!-- end of row -->            
             <br/>
@@ -19,7 +20,7 @@
                 <input type="file" src="#" name="new-image" class="form-control font-size16" id="newimage" >
                 <br />
                 <label for="datenewtheme">Datum vložení nového videa : </label>
-                <input type="date" name="date-new-theme" class="form-control font-size16" id="datenewtheme" >
+                <input type="date" name="date-new-theme" class="form-control font-size16" id="datenewtheme" value="<?php echo $theme['date'] ?>">
               </div>  
               <div class="form-group col-md-4 " >
                 <label for="topicalimage" >Vybraný obrázek : </label>
@@ -30,7 +31,7 @@
               </div>                          
               <div class="form-group col-md-2 hover4">
                 <br/><br/><br/><br/><br/>
-                <button type="submit" class="btn btn-default button-odeslat">Odeslat</button>
+                <button type="submit" class="btn btn-default button-odeslat" name="action" value="<?php if (isset ($theme['id'])) echo 'update'; else echo 'insert'; ?>" >Odeslat</button>
               </div>  
             </div>            <!-- end of row -->
 

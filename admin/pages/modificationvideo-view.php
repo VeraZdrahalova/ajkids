@@ -331,7 +331,11 @@
                 
               <div class="form-group col-md-4">
                 <label for="datenewvideo">Datum vložení nového videa : </label>
+<<<<<<< HEAD
                 <input type="date" name="date-new-video" class="form-control font-size16" id="datenewvideo" value="<?php echo $video['date']?>" >
+=======
+                <input type="date" name="date-new-video" class="form-control font-size16" id="datenewvideo" value="<?php echo $video['date'] ?>">
+>>>>>>> 5f3d4986c27d676cc43d52a49c84f90c53db0903
                 <br/><br/><br/>
               </div>
 

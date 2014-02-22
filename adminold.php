@@ -1,10 +1,6 @@
 <?php
 
 require_once 'core/db.php';
-<<<<<<< HEAD
-=======
-require_once 'core/Image.php';
->>>>>>> 5f3d4986c27d676cc43d52a49c84f90c53db0903
 
 $pages = [
 	'listthemes' => [
@@ -41,19 +37,12 @@ $pages = [
 	],
 ];
 
-
-<<<<<<< HEAD
-if (isset($_GET['page'])) {
-
-=======
 $selectedPage = null;
 
 if (isset($_GET['page'])) {
->>>>>>> 5f3d4986c27d676cc43d52a49c84f90c53db0903
 	$selectedPage = $pages[$_GET['page']];
 }
-//echo " tohle je var_dump(selectedPage) "; VAR_DUMP($selectedPage);
-//die;
+
 if ($selectedPage !== null AND file_exists('admin/pages/' . $selectedPage['id'] . '-action.php')) {
 	require 'admin/pages/' . $selectedPage['id'] . '-action.php';
 }
@@ -67,11 +56,7 @@ if ($selectedPage !== null AND file_exists('admin/pages/' . $selectedPage['id'] 
   <head>
     <meta name="description" content="Angličtina pro děti">  
     <meta charset="UTF-8">
-<<<<<<< HEAD
-    <title>Angličtina pro děti</title>
-=======
-    <title>Úprava angličtiny pro děti</title>
->>>>>>> 5f3d4986c27d676cc43d52a49c84f90c53db0903
+    <title>Úprava videa</title>
     
     <!-- Bootstrap -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -114,18 +99,14 @@ if ($selectedPage !== null AND file_exists('admin/pages/' . $selectedPage['id'] 
 	                  	<?php } ?>
                   	<?php } ?>
                 </ul>
-                <span  class="posunleft15" id="hovericon">             
+                <span  class="posunleft20" id="hovericon">             
                     <a href="ajkids.html" class="btn btn-default" id="icon" target="_blank" role="button"><span class="glyphicon glyphicon-home"></span></a>
                 </span>                   
               </div><!-- /.navbar-collapse -->
           </nav>
 
           <div class="posuntop90">
-<<<<<<< HEAD
-          	<?php var_dump($selectedPage); ?><br/>
-=======
            	<?php //var_dump($selectedPage); ?>
->>>>>>> 5f3d4986c27d676cc43d52a49c84f90c53db0903
           	
           	<?php if ($selectedPage !== null) { require 'admin/pages/' . $selectedPage['id'] . '-view.php'; } ?>
           </div>
