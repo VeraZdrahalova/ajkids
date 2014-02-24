@@ -1,4 +1,4 @@
-          <form role="form" method="POST">
+          <form role="form" method="POST" enctype="multipart/form-data">
             <div class="row posuntop90">
               <div class="form-group col-md-4">
                 <label for="namesong" tabindex="1" >Jméno písničky : </label>
@@ -18,7 +18,7 @@
                 <label for="newsong" >Vložit písničku : </label>
                 <input type="file" src="#" name="new-song" class="form-control font-size16 margin-bottom-7" id="newsong" tabindex="2" >
                <label for="datenewsong">Datum vložení nové písničky : </label>
-                <input type="date" name="date-new-song" class="form-control font-size16" id="datenewsong" value="<?php echo $song['date'] ?>" tabindex="4">
+                <input type="date" name="date-new-song" class="form-control font-size16" placeholder="Vložit datum ve formátu dd.mm.rrr" id="datenewsong" value="<?php echo $song['date'] ?>" tabindex="4">
               </div>
               <div class="form-group col-md-4 padding-top-64" >
                 

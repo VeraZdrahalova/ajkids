@@ -1,5 +1,5 @@
          
-          <form role="form" method="POST">
+          <form role="form" method="POST" enctype="multipart/form-data">
             <div class="row posuntop90">
               <div class="form-group col-md-4">
                 <label for="namevideo">Jméno videa : </label>
@@ -331,7 +331,7 @@
                 
               <div class="form-group col-md-4">
                 <label for="datenewvideo">Datum vložení nového videa : </label>
-                <input type="date" name="date-new-video" class="form-control font-size16" id="datenewvideo" value="<?php echo $video['date'] ?>">
+                <input type="date" name="date-new-video" class="form-control font-size16" placeholder="Vložit datum ve formátu dd.mm.rrr" id="datenewvideo" value="<?php echo $video['date'] ?>">
                 <br/><br/><br/>
               </div>
 

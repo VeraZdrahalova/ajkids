@@ -1,4 +1,12 @@
           <form role="form" method="POST" enctype="multipart/form-data">
+<?php 
+/*	Pro posílání soub. přes form. musí být v <FORM> uvedeno:
+		1. method="POST"	- určuje způsob poslání dat;
+		2. enctype="multipart/form-data"	- určuje složitější způsob kódování dat,
+			takto poslaná data jsou zpracována Apachem a v PHP poskytnuta (již upravená) ke zpracování v $_POST a $_FILES,
+			standartní nastavení je enctipe="application/x-www-form-urlencoded";
+*/		
+?>          
             <div class="row posuntop90">
               <div class="form-group col-md-4">
                 <label for="nameword">Slovíčko : </label>
@@ -21,7 +29,7 @@
               </div>             
               <div class="form-group col-md-4">
                 <label for="datenewword">Datum vložení nového slovíčka : </label>
-                <input type="date" name="date-new-word" class="form-control font-size16 margin-bottom-7" value="<?php echo $word['date'] ?>" id="datenewword" >
+                <input type="date" name="date-new-word" class="form-control font-size16 margin-bottom-7" placeholder="Vložit datum ve formátu dd.mm.rrr" value="<?php echo $word['date'] ?>" id="datenewword" >
                 <label for="newimage" >Vložit nový obrázek : </label>
                 <input type="file" src="#" name="new-image" class="form-control font-size16" id="newimage" >                            
               </div>

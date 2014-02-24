@@ -10,15 +10,15 @@ abstract class Image_Abstract
 	
 	protected function _imageCreateFrom ($image)
 	{
-		$img = getimagesize($image);
-		
-		if($img["mime"] == "image/jpeg") 
-		{
-			return imagecreatefromjpeg($image);
-		}
-		elseif ($img["mime"] == "image/gif") 
-		{
-			return imagecreatefromgif($image);		
+		$img = getimagesize($image);						 //	var_dump(getimagesize($src-image));						
+																 //	array (size=7)		
+		if($img["mime"] == "image/jpeg")							 //	0 => int 350		- šířka
+		{															 //	1 => int 200		- výška
+			return imagecreatefromjpeg($image);						 //	2 => int 2			- typ obrázku (jedna z konstant IMAGETYPE_XXX)
+		}															 //	3 => string 'width="350" height="200"' (length=24)
+		elseif ($img["mime"] == "image/gif")						 //	'bits' => int 8 		= počet bitů pro každou barvu
+		{															 //	'channels' => int 3		- 3 pro RGB obrázky a 4 pro CMYK
+			return imagecreatefromgif($image);						 //	'mime' => string 'image/jpeg' (length=10)		
 		}
 		elseif ($img["mime"] == "image/png") 
 		{
