@@ -1,5 +1,5 @@
 
-          <form role="form" method="POST">
+          <form role="form" method="POST" enctype="multipart/form-data">
             <div class="row posuntop90">
               <div class="form-group col-md-4">
                 <label for="nametheme">Jméno téma : </label>
@@ -20,7 +20,7 @@
                 <input type="file" src="#" name="new-image" class="form-control font-size16" id="newimage" >
                 <br />
                 <label for="datenewtheme">Datum vložení nového videa : </label>
-                <input type="date" name="date-new-theme" class="form-control font-size16" id="datenewtheme" value="<?php echo $theme['date'] ?>">
+                <input type="date" name="date-new-theme" class="form-control font-size16" placeholder="Vložit datum ve formátu dd.mm.rrr" id="datenewtheme" value="<?php echo $theme['date'] ?>">
               </div>  
               <div class="form-group col-md-4 " >
                 <label for="topicalimage" >Vybraný obrázek : </label>

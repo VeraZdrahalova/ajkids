@@ -20,10 +20,6 @@ $videos2 = mysqli_fetch_all($result, MYSQLI_ASSOC);
               </thead>
               <tbody>
               	<?php foreach ($videos2 as $video) { ?>
-<<<<<<< HEAD
-              	<?php var_dump($video)?> <br/>
-=======
->>>>>>> 5f3d4986c27d676cc43d52a49c84f90c53db0903
                   <tr>
                       <td> <?php echo $video['name'] ?></td>
                       <td> téma 1, téma 2, téma 3, téma 4, téma 5, téma 1, téma 2, téma 3, téma 4, téma 5, téma 1, téma 2, téma 3, téma 4, téma 5,  </td>
