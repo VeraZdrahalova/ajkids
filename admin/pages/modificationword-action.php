@@ -71,7 +71,58 @@ if (count($_POST) > 0) {			/* f-ce count vrátí součet public vlastností nad 
 */	
 
 	if ($formData['action'] === 'insert') {
-		$mysqli->query('INSERT INTO words (namecz, name, date) VALUES("' . $formData['name-word-cz'] . '", "' . $formData['name-word'] . '", "' . $formData['date-new-word'] . '")');
+		$mysqli->query('INSERT INTO words (namecz, name, date ) VALUES("' . $formData['name-word-cz'] . '", "' . $formData['name-word'] . '", "' . $formData['date-new-word'] . '")');
+		
+		$last_id = $mysqli->insert_id;										// f-ce $mysqli->insert_id vrací poslední ID AUTO_INCREMENT příkazu INSERT jako číslo int
+		if (strlen($_FILES['new-image']['tmp_name']) > 0) {					// f-ce strlen vrací délku řetězce jako typ int
+			$image = new Image();
+			$params = [
+				0 => [													// echo __FILE__ :	 /var/www/ajkids.lamp/web/admin/pages/modificationword-action.php (= adresa aktuálního soub.)
+					'dir' => dirname(dirname(__DIR__)) . '/image/',		// echo __DIR__ :    /var/www/ajkids.lamp/web/admin/pages (= adresa aktuálního soub. bez jeho názvu)
+					'size' => [											// f-ce dirname([$var]/'char')		zkrátí zprava - uvedenou adresu o jeden adresář nebo jm.soub.
+						'width' => 800,									//					nebo ponechá jen / nebo . jako hodnotu nadřazeného adresáře,
+						'height' => 600									//					__DIR__ = dirname(__FILE__),
+					],													// 					vnořováním této f-ce se pohybujeme v našich soub., ať jsou přesunuty kamkoliv
+					'id' => $last_id
+				],
+				1 => [
+					'size' => [
+						'width' => 100,
+						'height' => 100
+					],
+					'prefix' => 'maly-'
+				]
+			];
+			$obrazek = $image->create($_FILES['new-image']['tmp_name'], $params);	
+			/* var_dump($obrazek) : 
+		 		 array (size=2)
+					  0 => 
+					    array (size=4)
+					      'name' => string '16.jpg' (length=6)
+					      'width' => float 800
+					      'height' => float 600
+					      'size' => int 376719
+					  1 => 
+					    array (size=4)
+					      'name' => string 'maly-16.jpg' (length=11)
+					      'width' => float 100
+					      'height' => float 75
+					      'size' => int 9665 
+			*/				
+			$mysqli->query('UPDATE words SET image = "' . $obrazek[0]['name'] . '" WHERE id = ' . $last_id );
+		}
+		
+		if (strlen($_FILES['new-sound']['tmp_name'])> 0) {
+			copy($_FILES['new-sound']['tmp_name'], dirname(dirname(__DIR__)) . '/sounds/' . $_FILES['new-sound']['name']);
+			// bool copy ( string $source , string $dest [, resource $context ] )	 - f-ce kopíruje soubor(odkud, kam/jmeno_souboru.xxx, ?)
+			// bool move_uploaded_file ( string $filename , string $destination )	 
+			//	- f-ce provede kontrolu nataženého souboru a přesune ho (odkud, kam/jmeno_souboru.xxx )
+			
+			$mysqli->query('UPDATE words SET sound = "' . $_FILES['new-sound']['name'] . '" WHERE id = ' . $last_id );
+		}
+		
+		
+		
 		
 	} elseif ($formData['action'] === 'update' AND isset($word['id'])) {
 		if (strlen($_FILES['new-image']['tmp_name']) > 0) {					// f-ce strlen vrací délku řetězce jako typ int
