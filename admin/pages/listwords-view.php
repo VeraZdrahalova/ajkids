@@ -26,7 +26,7 @@ $words = $result->fetch_all(MYSQLI_ASSOC);		// f-ce fetch_all vrací na základ�
                       <td> <?php echo $word['name'] ?> </td>
                       <td class="view2" style="padding: 0px 2px">
                       	<?php if ($word['image'] !== null) { ?>
-                      		<img src="image/maly-<?= $word['image'] ?>" />
+                      		<img src="image/maly-<?php echo $word['image'] ?>" />
                       	<?php } ?>
                       </td>
                       <td>
