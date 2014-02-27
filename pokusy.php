@@ -78,7 +78,7 @@ echo "3) " . dirname(".") . "<br /><br /><br />"; // 3) .
       		var_dump($src);
 //     		var_dump(copy($_FILES['test-image']['tmp_name'], $src));
 //    		var_dump(move_uploaded_file($_FILES['test-image']['tmp_name'], $src));
-//			var_dump(getimagesize($src));
+			var_dump(getimagesize($src));
       		?>
       		Pokusný obrázek : &nbsp;&nbsp;&nbsp;<img src="<?php echo $src?>" alt="pokus s obrázkem" border="1" />
       		<br/><br/><br/>
@@ -114,11 +114,9 @@ echo "3) " . dirname(".") . "<br /><br /><br />"; // 3) .
 */
 
 echo '<p>ahoj</p>'; 		
-		?>
-		
-		<?php
 
-		$celkem = 0;
+
+/*		$celkem = 0;
 		
 		for ($i = 0; $i <= 10; $i++) {
 			
@@ -130,6 +128,8 @@ echo '<p>ahoj</p>';
 			
 			echo "<p>$i a $celkem</p>";
 		}
+*/		
+//		print_r(get_defined_constants());		
 		
 		?>
 		

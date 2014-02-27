@@ -1,8 +1,9 @@
 <?php
 
 $mysqli = new mysqli('localhost', 'root', 'lamp', 'ajkids');
-$mysqli->query('SET CHARSET UTF-8');
-
+$mysqli->query('SET CHARSET UTF-8');		// nastaví znakovou sadu pro komunikaci mysqli s php, 
+											// mysqli nepřebírá žádné nastavení znakové sady z mnou vytvořené db nebo z tabulek
+											
 /*var_dump($mysqli);	= var_dump($mysqli2)
 object(mysqli)[1]
 public 'affected_rows' => null

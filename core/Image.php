@@ -17,13 +17,40 @@ class Image extends Image_Abstract
 		$this->_id = $id;
 		
 	}
+		
+/* ukázka deklarace pole f-cí array()
+	$fruits = array (
+			"fruits"  => array("a" => "orange", "b" => "banana", "c" => "apple"),
+			"numbers" => array(1, 2, 3, 4, 5, 6),
+			"holes"   => array("first", 5 => "second", "third")
+	);
+	var_dump($fruits);
+		array (size=3)
+			'fruits' =>
+				array (size=3)
+					'a' => string 'orange' (length=6)
+					'b' => string 'banana' (length=6)
+					'c' => string 'apple' (length=5)
+			'numbers' =>
+				array (size=6)
+					0 => int 1
+					1 => int 2
+					2 => int 3
+					3 => int 4
+					4 => int 5
+					5 => int 6
+			'holes' =>
+				array (size=3)
+					0 => string 'first' (length=5)
+					5 => string 'second' (length=6)
+					6 => string 'third' (length=5)
+*/
 	
 	/**
-	 * 
 	 * @param file $image - $_FILES[NAZEV]['tmp_name']
 	 * @param array $parameters - [
 	 * 		0 => ['dir' => CESTA, 'size' => ['height' => VYSKA, 'width' => SIRKA], 'id' => JEDINECNY_NAZEV, 'prefix' => PREFIX]
-	 * 		1 => ['dir' => CESTA, 'size' => ['height' => VYSKA, 'width' => SIRKA], 'id' => JEDINECNY_NAZEV, 'prefix' => 'PREFIX]
+	 * 		1 => ['dir' => CESTA, 'size' => ['height' => VYSKA, 'width' => SIRKA], 'id' => JEDINECNY_NAZEV, 'prefix' => PREFIX]
 	 * ]
 	 * @param int $size - velikost v bytech
 	 */
@@ -33,8 +60,8 @@ class Image extends Image_Abstract
 		
 		if ($size AND $size > 0) $this->_maxSize = $size * 1024;
 		
-		if(filesize($image) < $this->_maxSize) 
-		{
+		if(filesize($image) < $this->_maxSize) 			// int filesize ( string $filename )   - vrací v bytech velikost daného soub.,
+{																			// - jen pro soub. do velikosti 2GB
 			$velikost = getimagesize($image);
 			$fileExtension = $this->_getFileExtension($velikost["mime"]);			
 			if ($fileExtension == false) return false;
@@ -206,4 +233,5 @@ class Image extends Image_Abstract
 		
 		return true;
 	}
+		
 }

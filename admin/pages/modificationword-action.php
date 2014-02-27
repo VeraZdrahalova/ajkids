@@ -100,7 +100,9 @@ if (count($_POST) > 0) {			/* f-ce count vrátí součet public vlastností nad 
 		
 		if (strlen($_FILES['new-sound']['tmp_name'])> 0) {
 			copy($_FILES['new-sound']['tmp_name'], dirname(dirname(__DIR__)) . '/sounds/' . $_FILES['new-sound']['name']);
-			
+// bool copy ( string $source , string $dest [, resource $context ] )	 - f-ce kopíruje soubor(odkud, kam/jmeno_souboru.xxx, ?)	
+// bool move_uploaded_file ( string $filename , string $destination )	 - f-ce přesune soubor(odkud, kam/jmeno_souboru.xxx )
+ 
 			$mysqli->query('UPDATE words SET sound = "' . $_FILES['new-sound']['name'] . '" WHERE id = ' . $word['id']);
 		}
 		

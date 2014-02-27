@@ -1,7 +1,9 @@
 <?php 
-$result = $mysqli->query('SELECT * FROM words ORDER BY namecz');
-$words = $result->fetch_all(MYSQLI_ASSOC);
-?>          
+$result = $mysqli->query('SELECT * FROM words ORDER BY namecz');	// f-ce query nad db vrací odpověď jako typ objekt, který nejde vypsat
+																	// -> je nutné použít f-ci fetch_...
+$words = $result->fetch_all(MYSQLI_ASSOC);		// f-ce fetch_all vrací na základě param. MYSQLI_ASSOC všechny vybrané řádky jako pole;
+  												// zpracováním f-cí fetch_all se $result vyprázdní => znovu poslat dotaz  
+?>  											      
           
           <table class="table table-striped table-bordered posuntop90">
               <thead>
